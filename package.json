@@ -1,0 +1,45 @@
+{
+  "name": "kms-auto-decrypt",
+  "version": "1.0.0",
+  "engines": {
+    "node": "4.3"
+  },
+  "description": "Scans an Object and auto decrypts for keys ending with Encrypted using AWS KMS",
+  "main": "lib/index.js",
+  "scripts": {
+    "preinstall": "npm prune",
+    "lint": "eslint .",
+    "test": "cross-env NODE_ENV=test istanbul cover --root lib --dir ./coverage node_modules/mocha/bin/_mocha -- test",
+    "posttest": "istanbul report && npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ktonon/node-kms-auto-decrypt.git"
+  },
+  "keywords": [
+    "node",
+    "aws",
+    "kms"
+  ],
+  "author": "Kevin Tonon <kevin@betweenconcepts.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ktonon/node-kms-auto-decrypt/issues"
+  },
+  "homepage": "https://github.com/ktonon/node-kms-auto-decrypt#readme",
+  "dependencies": {
+    "aws-sdk": "^2.7.7",
+    "bluebird": "^3.4.6"
+  },
+  "devDependencies": {
+    "cross-env": "^3.1.3",
+    "eslint": "^3.10.2",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.7.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.1.2",
+    "should": "^11.1.1"
+  }
+}
